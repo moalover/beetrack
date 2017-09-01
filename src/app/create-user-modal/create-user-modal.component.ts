@@ -28,6 +28,7 @@ export class CreateUserModalComponent implements OnInit {
 	}
 
 	open(content) {
+	    this.user = new User({});
 	    this.modal = this.modalService.open(content);
 	}
 

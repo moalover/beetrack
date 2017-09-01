@@ -1,6 +1,6 @@
 <ng-template #content let-c="close" let-d="dismiss">
 	<div class="modal-header">
-		<h4 class="modal-title">Agregar Nuevo Contacto</h4>
+		<h4 class="modal-title">Agregar Nuevo Usuario</h4>
 		<button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
 			<span aria-hidden="true">&times;</span>
 		</button>
@@ -29,4 +29,4 @@
 <div id="overall" [hidden]="!waiting">
 </div>
 
-<button type="submit" (click)="open(content)" class="btn btn-primary beetrack-button float-right"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo contacto</button>
+<button type="submit" (click)="open(content)" class="btn btn-primary beetrack-button float-right"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo usuario</button>
