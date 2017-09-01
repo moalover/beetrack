@@ -18,3 +18,8 @@ Este componente incluye la lista, búsqueda, destrucción y creación de Usuario
 
 ### CreateUserModal
 Este componente incluye el botón "Nuevo Usuario", el que al ser clickado abre el modal de cración de usuarios.
+
+## Servicio de Angular
+
+###ApiService
+Este servicio consume el API en localhost:3000 y devuelve un observable por cada operación
