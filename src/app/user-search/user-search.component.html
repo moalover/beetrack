@@ -1,0 +1,32 @@
+<div class="container-fluid">
+	<div class="row" id="toprow">
+		<div id="logo" class="d-none d-md-block col-3"><img src="/assets/beetrack-logo.png"></div>
+		<div id="search-form" class="col-12 col-sm-8 col-md-6">
+			<div class="input-group mb-2 mb-sm-0">
+		        <input (input)="searchChange($event)" type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Buscar contacto...">
+		        <div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
+		    </div>
+		</div>
+		<div class="col-12 col-sm-4 col-md-3">
+			<app-create-user-modal (onUserCreated)="restartSearch()"></app-create-user-modal>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row">
+		<div *ngFor="let user of users" class="col-12 user-row">
+			<button title="Borrar usuario" type="button" class="btn btn-primary delete-user d-sm-none" (click)="deleteUser(user)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+			<div class="user-photo" [style.backgroundImage]="'url(' + user.photo + ')'"></div>
+			<div class="user-content">
+				<h3>{{user.name}}</h3>
+				<p>{{user.description}}</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="pagin">
+	<a type="button" (click)="prevPage()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a> {{page + 1}} <a type="button" (click)="nextPage()"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+</div>
+
+<div id="overall" [hidden]="!waiting">
+</div>

@@ -1,0 +1,12 @@
+#overall{
+	background-color: rgba(255,255,255,0.7);
+	position: fixed;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background-image: url('/assets/spinner.gif');
+	background-position: center;
+	background-repeat: no-repeat;
+}

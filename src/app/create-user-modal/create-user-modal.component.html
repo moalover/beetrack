@@ -1,0 +1,32 @@
+<ng-template #content let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title">Agregar Nuevo Contacto</h4>
+		<button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+	<form>
+		<div class="form-group">
+			<label for="exampleFormControlInput1">URL Imagen de perfil <span class="required-color" style="color: #ff0000">*</span>:</label>
+			<input type="email" [(ngModel)]="user.photo" name="photo" class="form-control" id="exampleFormControlInput1">
+		</div>
+		<div class="form-group">
+			<label for="exampleFormControlInput1">Nombre <span class="required-color" style="color: #ff0000">*</span>:</label>
+			<input type="email" [(ngModel)]="user.name" name="name" class="form-control" id="exampleFormControlInput1">
+		</div>
+		<div class="form-group">
+			<label for="exampleFormControlInput1">Descripción <span class="required-color" style="color: #ff0000">*</span>:</label>
+			<textarea [(ngModel)]="user.description" name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+		</div>
+	</form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark" (click)="save()">Crear</button>
+	</div>
+</ng-template>
+
+<div id="overall" [hidden]="!waiting">
+</div>
+
+<button type="submit" (click)="open(content)" class="btn btn-primary beetrack-button float-right"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo contacto</button>
